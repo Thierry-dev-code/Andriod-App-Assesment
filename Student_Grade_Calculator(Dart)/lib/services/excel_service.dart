@@ -314,9 +314,8 @@ class ExcelService {
       // Create a new Excel workbook
       final excel = Excel.createExcel();
       
-      // Remove default sheet and create 'Results' sheet
-      excel.delete('Sheet1');
-      final detailsSheet = excel['All Results'];
+      // Use 'Sheet1' as the default first sheet for results
+      final detailsSheet = excel['Sheet1'];
       final summarySheet = excel['Summary by Student'];
 
       // Styles
